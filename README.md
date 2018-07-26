@@ -1,4 +1,4 @@
-# Ethos-monitor
+# Ethos Monitor
 
 ## Overview
 
@@ -37,7 +37,7 @@ qmmailbox@gmail.com
 
 The MIT License
 
-Copyright (c) 2010-2018 Google, Inc. http://angularjs.org
+Copyright (c) 2010-2018 qmlab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
