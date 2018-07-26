@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a python program used to monitor the ethos rigs status. You need to schedule it using task scheduler in Windows or crontab in Linux. Only the **monitor** step needs to be scheduled.
+This is a python program used to monitor and autoreboot the mining rigs running EthOS. You need to schedule it using task scheduler in Windows, crontab in Linux, or automator task in Mac OS X. If you want to schedule it, only the **monitor** step needs to execute in each run.
 
 ## What does it do?
 
@@ -28,10 +28,6 @@ git clone https://github.com/qmlab/ethos-monitor
 * AutoReboot - Whether automatically reboot the faulty rig using EthOS (cannot reboot if the OS crashes)
 * Logfile - File path to save local logs
 * Panel* - EthOS panel information
-
-## Logging
-
-Logs will be saved in the local file **ethos-monitor.log**
 
 ## Contact Me
 
