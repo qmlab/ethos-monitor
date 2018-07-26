@@ -1,4 +1,4 @@
-# Ethos Monitor
+# EthOS Monitor
 
 ## Overview
 
