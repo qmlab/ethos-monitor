@@ -65,6 +65,7 @@ if __name__ == "__main__":
     if len(exclude_str) > 0:
         exclude_list = exclude_str.split(',')
 
+    total_watts = 0
     for id, rig in rigs.items():
         driver = rig['driver']
         gpus = int(rig['gpus'])
@@ -76,6 +77,7 @@ if __name__ == "__main__":
                 errors[name] = 'Abnormal hash value: %d' % hash
         elif not check_watts(driver, watts.split()):
             errors[name] = 'Abnormal power consumption: %s' % watts
+        total_watts += sum(int(w) for w in watts.split())
 
     if len(errors) > 0:
         logging.error('errors:' + str(errors))
@@ -88,4 +90,4 @@ if __name__ == "__main__":
         if SEND_FB and not send_fbchat(errors):
             logging.warning("Failed to send Facebook message alert")
     
-    logging.info('Successfully completed.')
+    logging.info('Successfully completed. Total watts: %d' % total_watts)
